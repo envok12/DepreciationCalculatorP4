@@ -52,7 +52,7 @@ namespace DepreciationCalculatorP4
             this.titleLabel = new System.Windows.Forms.Label();
             this.inventoryTabListBox = new System.Windows.Forms.ListBox();
             this.summaryTab = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.summaryTextBox = new System.Windows.Forms.TextBox();
             this.calculateInventoryButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.instructionTab.SuspendLayout();
@@ -295,7 +295,7 @@ namespace DepreciationCalculatorP4
             // summaryTab
             // 
             this.summaryTab.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.summaryTab.Controls.Add(this.textBox1);
+            this.summaryTab.Controls.Add(this.summaryTextBox);
             this.summaryTab.Controls.Add(this.calculateInventoryButton);
             this.summaryTab.Location = new System.Drawing.Point(4, 25);
             this.summaryTab.Name = "summaryTab";
@@ -304,14 +304,14 @@ namespace DepreciationCalculatorP4
             this.summaryTab.TabIndex = 2;
             this.summaryTab.Text = "Summary";
             // 
-            // textBox1
+            // summaryTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 257);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 123);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Visible = false;
+            this.summaryTextBox.Location = new System.Drawing.Point(171, 252);
+            this.summaryTextBox.Multiline = true;
+            this.summaryTextBox.Name = "summaryTextBox";
+            this.summaryTextBox.Size = new System.Drawing.Size(433, 123);
+            this.summaryTextBox.TabIndex = 1;
+            this.summaryTextBox.Visible = false;
             // 
             // calculateInventoryButton
             // 
@@ -324,6 +324,7 @@ namespace DepreciationCalculatorP4
             this.calculateInventoryButton.TabIndex = 0;
             this.calculateInventoryButton.Text = "Calculate Inventory Value";
             this.calculateInventoryButton.UseVisualStyleBackColor = false;
+            this.calculateInventoryButton.Click += new System.EventHandler(this.calculateInventoryButton_Click);
             // 
             // Form1
             // 
@@ -370,7 +371,7 @@ namespace DepreciationCalculatorP4
         private System.Windows.Forms.RadioButton doubleDecliningRadioButton;
         private System.Windows.Forms.RadioButton straightLineRadioButton;
         private System.Windows.Forms.Button calculateInventoryButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox summaryTextBox;
     }
 }
 
